@@ -26,6 +26,6 @@ def self.find(id, db)
     type = pokemon[2]
     hp = pokemon[3]
 
-    pokemon_instance = Pokemon.new(id: id, name: name, type: type, db: database_connection)
+    pokemon_instance = Pokemon.new(id: id, name: name, type: type, db: db)
   end
 end 
