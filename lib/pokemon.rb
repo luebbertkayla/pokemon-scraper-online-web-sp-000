@@ -27,5 +27,5 @@ class Pokemon
     
     pokemon = db.execute(sql, id)
     
-    Pokemon.new 
+    Pokemon.new(id, pokemon)
 end 
