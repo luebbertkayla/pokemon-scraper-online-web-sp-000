@@ -23,4 +23,5 @@ class Pokemon
   def self.find 
     sql = <<-SQL
       SELECT * FROM pokemon WHERE id = ?
+    SQL
 end 
