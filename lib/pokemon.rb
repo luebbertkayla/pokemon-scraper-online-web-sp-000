@@ -25,5 +25,7 @@ class Pokemon
       SELECT * FROM pokemon WHERE id = ?
     SQL
     
-    pokemon = db.execute(sql, )
+    pokemon = db.execute(sql, id)
+    
+    
 end 
