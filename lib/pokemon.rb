@@ -20,12 +20,12 @@ class Pokemon
       db.execute(sql, name, type)
     end
     
-def self.find(id, database_connection)
-    pokemon = database_connection.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
+def self.find(id, db)
+    pokemon = db.execute("SELECT * FROM pokemon WHERE id = ?", id)
     name = pokemon[1]
     type = pokemon[2]
     hp = pokemon[3]
 
-    pokemon_inst = Pokemon.new(id: id, name: name, type: type, db: database_connection)
+    pokemon_instance = Pokemon.new(id: id, name: name, type: type, db: database_connection)
   end
 end 
